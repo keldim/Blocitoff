@@ -1,20 +1,26 @@
-<h1>Users</h1>
 
-<div class="row">
-  <div class="col-md-8">
-<!-- #7 -->
+<h1 class="center">My todos</h1>
 
-      <div class="media">
-        <div class="media-body">
-          <h4 class="media-heading">
-<!-- #8 -->
-            <%= @user.email  %>
-          </h4>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Days left</th>
+      <th>Complete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.items.each do |item|  %>
+    <tr>
+      <td class="form-group">
+        <%= render partial: 'items/item', locals: { item: item } %>
+      </td>
+      <td>#</td>
+      <td>#</td>
+    </tr>
+    <% end %>
 
-        </div>
-      </div>
-  </div>
-  <div class="col-md-4">
-<!-- #9 -->
-  </div>
-</div>
+  </tbody>
+</table>
+
+<%= render partial: 'items/form' %>
