@@ -11,13 +11,9 @@
   </thead>
   <tbody>
     <% @user.items.each do |item|  %>
-    <tr>
-      <td class="form-group">
-        <%= render partial: 'items/item', locals: { item: item } %>
-      </td>
-      <td>#</td>
-      <td>#</td>
-    </tr>
+
+      <%= render partial: 'items/item', locals: { item: item } %>
+    
     <% end %>
 
   </tbody>
