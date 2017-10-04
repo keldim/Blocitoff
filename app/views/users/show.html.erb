@@ -1,7 +1,7 @@
 
 <h1 class="center">My todos</h1>
 
-<table class="table table-bordered table-striped">
+<table class="table table-bordered table-striped table-hover">
   <thead>
     <tr>
       <th>Description</th>
@@ -13,7 +13,7 @@
     <% @user.items.each do |item|  %>
 
       <%= render partial: 'items/item', locals: { item: item } %>
-    
+
     <% end %>
 
   </tbody>

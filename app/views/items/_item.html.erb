@@ -6,6 +6,6 @@
     <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7 ) %> left
   </td>
   <td class="form-group">
-    <%= link_to "", user_item_path(current_user, item), method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+    <%= link_to "", user_item_path(current_user, item), method: :delete, remote: true, class: 'glyphicon glyphicon-remove' %>
   </td>
 </tr>

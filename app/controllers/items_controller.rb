@@ -17,10 +17,4 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
     @item.destroy
   end
-
-  respond_to do |format|
-        format.html
-        format.js
-      end
-
 end
