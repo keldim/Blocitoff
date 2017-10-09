@@ -1,2 +1,12 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<% if user_signed_in? %>
+<div class="text-center outlay">
+  <h1>Blocitoff:</h1>
+  <h2>A self-destructing to-do list to keep you focused on the things that really matter.</h2>
+  <h3><%= link_to "Your To-Do List", current_user %></h3>
+</div>
+<% else %>
+<div class="text-center outlay">
+  <h1>Blocitoff:</h1>
+  <h2>A self-destructing to-do list to keep you focused on the things that really matter.</h2>
+</div>
+<% end %>
